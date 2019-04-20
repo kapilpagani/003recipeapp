@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Header from '../components/Header';
-import {Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export default class Default extends Component {
   render() {
@@ -12,3 +12,4 @@ export default class Default extends Component {
     )
   }
 }
+ 
