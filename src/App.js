@@ -8,6 +8,7 @@ import Default from './pages/Default';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Navbar from './components/Navbar';
 
+
 class App extends Component {
   render() {
     return (
