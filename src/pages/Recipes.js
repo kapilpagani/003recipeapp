@@ -35,9 +35,9 @@ export default class Recipes extends Component {
     }
   }
 
-  // async componentDidMount() {
-  //   this.getRecipes();
-  // }
+  async componentDidMount() {
+    this.getRecipes();
+  }
 
   handleChange = (e) => {
     this.setState({
@@ -47,11 +47,11 @@ export default class Recipes extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const {base_url, query, search} = this.state;
+    const { base_url, query, search } = this.state;
     this.setState({
-      url : `${base_url}${query}${search}`,
+      url: `${base_url}${query}${search}`,
       search: ""
-    }, ()=> this.getRecipes())
+    }, () => this.getRecipes())
   }
 
   render() {
