@@ -5,14 +5,14 @@ import { Link } from 'react-router-dom';
 export default function Navbar() {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light font-weight-bold">
-            <Link to="/" className="navbar-brand text-slanted" id="im1">Recipe Application</Link>
+            <Link to="/" className="navbar-brand text-slanted" id="im1" style={{ "margin-right": "60px" }}>Recipe App</Link>
             <div className="collapse navbar-collapse show">
                 <ul className="navbar-nav ">
                     <li className="navbar-item">
-                        <Link className="nav-link text-primary" to="/">Home</Link>
+                        <Link className="nav-link text-primary mx-2" to="/">Home</Link>
                     </li>
                     <li className="navbar-item">
-                        <Link className="nav-link text-primary" to="/recipes">Recipes</Link>
+                        <Link className="nav-link text-primary mx-2" to="/recipes">Recipes</Link>
                     </li>
                 </ul>
             </div>
