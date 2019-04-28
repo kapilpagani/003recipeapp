@@ -10,7 +10,7 @@ export default class Search extends Component {
             <h1 className="text-slanted text-capitalie">
               <strong className="text-orange">Search Recipes</strong>
             </h1>
-            <form className="mt-4">
+            <form className="mt-4" onSubmit={handleSubmit}>
               <label htmlFor="search" className="text-capitalize">
                 types recipes seperated by comma
               </label>

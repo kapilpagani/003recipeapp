@@ -6,7 +6,7 @@ import { recipeData } from '../data/tempList'
 export default class Recipes extends Component {
   constructor(props) {
     super(props)
-    this.getRecipes = this.getRecipes.bind(this);
+    // this.getRecipes = this.getRecipes.bind(this);
   }
 
   state = {
@@ -26,11 +26,12 @@ export default class Recipes extends Component {
         this.setState({
           error: "sorry but your search did not return anything"
         })
-      }
+      }else{
       this.setState({
         recipes: jsonData.recipes
-      })
-    } catch (error) {
+      }, () => { console.log(jsonData.recipes.length); }
+      )
+    }} catch (error) {
       console.log(error);
     }
   }
@@ -51,7 +52,7 @@ export default class Recipes extends Component {
     this.setState({
       url: `${base_url}${query}${search}`,
       search: ""
-    }, () => this.getRecipes())
+    }, () => { this.getRecipes(); })
   }
 
   render() {
