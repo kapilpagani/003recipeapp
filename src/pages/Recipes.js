@@ -6,7 +6,7 @@ import { recipeData } from '../data/tempList'
 export default class Recipes extends Component {
   constructor(props) {
     super(props)
-    // this.getRecipes = this.getRecipes.bind(this);
+     this.getRecipes = this.getRecipes.bind(this);
   }
 
   state = {
@@ -28,7 +28,8 @@ export default class Recipes extends Component {
         })
       }else{
       this.setState({
-        recipes: jsonData.recipes
+        recipes: jsonData.recipes,
+        error: ''
       }, () => { console.log(jsonData.recipes.length); }
       )
     }} catch (error) {
